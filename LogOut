@@ -1,0 +1,41 @@
+Bug-by-Feature: Logout  -DAY 1
+
+"What to hunt, feature by feature."
+Starting today, I’m dropping a new series for all bug bounty hunters, pentesters, and security learners — where we dive into what bugs to hunt on each common web app feature.
+
+"You logged out, but the server didn't get the memo."
+Here are 12+ things to test on any logout functionality:
+
+🚨 Hunt These:
+1. Replay intercepted requests after logout 
+2. Use old JWT or bearer token post-logout 
+3. Use session cookie after logout 
+4. Use refresh token to get new access token after logout 
+5. Logout on device A — check session on device B 
+6. WebSocket connection stays active after logout 
+7. Back button loads cached authenticated pages 
+8. Logout is vulnerable to CSRF 
+9. Session fixation (same token/session reused across logins) 
+10. Redirect to external site after logout (`next` param abuse) 
+11. Sensitive API responses still cached or accessible 
+12. Logout doesn't expire refresh token 
+13. Cross-tab/session logout not enforced (multi-tab persistence)
+
+✅ The full checklist of each feature will be maintained on GitHub:
+🔗 https://lnkd.in/dRPJPRBZ
+📌 Bookmark it. Save it. Use it as your recon playbook.
+
+💭 Before moving to the next feature… test this one like a maniac.
+This is exactly what we teach on real apps in live bug bounty environments.
+
+⚡ Want to level up your skills?
+Explore our specialized training programs below:
+Trainings!
+
+Bug Bounty Mastercourse : https://lnkd.in/d7p5spcS 
+Web3 and Smart Contracts : https://lnkd.in/dHqq4d6E
+JS Source Code Review (recorded) : https://shorturl.at/EkteM
+Android (APK) Bug Bounty (recorded) : https://shorturl.at/XfnkU
+1-on-1 Trainings (Expensive) : https://shorturl.at/XtE3Q
+
+#bugbyfeature #logout #bugbounty #websecurity #infosec #token #session #recon #cybersecurity #offensivesecurity #ethicalhacking #appsec #thecyberboy #livehacking #securityresearch #bughunter #bugbountytraining #hacker #training
