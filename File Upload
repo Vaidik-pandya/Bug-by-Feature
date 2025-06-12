@@ -1,0 +1,70 @@
+Bug-by-Feature: File Upload — DAY 2
+
+"It’s just a file upload… until it’s Bug."
+Here are 15+ real-world issues to test whenever you see a file upload input:
+
+1. Uploading files with executable extensions (.php, .jsp, .aspx, etc.)
+
+2. Double extension bypass (.jpg.php)
+
+3. MIME type spoofing (image/png with actual payload)
+
+4. Missing or weak server-side file type validation
+  → See if backend accepts any file type, even when the frontend restricts it.
+
+5. Stored XSS via uploaded files (HTML, SVG, or malicious filenames)
+
+6. RCE via file parsing libraries (ImageMagick, Exiftool, etc.)
+  → Abuse processing tools to trigger code execution during image or file handling.
+
+7. Uploading oversized files (DoS)
+
+8. No file size limit or enforcement
+
+9. File name injection (SSRF or local file overwrite)
+  → Craft filenames like http://internal-service or ../../../../etc/passwd.
+
+10. Uploading malicious archives (zip bombs, nested zips)
+  → Try zip bombs or deeply nested folders to crash the unarchiver.
+
+11. ZIP file extraction (Zip Slip vulnerability)
+  → Use relative paths in ZIP files to write outside the intended directory.
+
+12. Uploading to accessible S3 bucket or public storage
+  → Uploaded files are public and can be abused for phishing or hosting malware.
+
+13. Uploading JS/JSON files and accessing them directly (CORS leaks)
+  → If JS files are uploaded and exposed, test for CORS misconfigs.
+
+14. Race conditions during extension or rename checks
+  → Try renaming or accessing the file while the backend is still validating it.
+
+15. Client-side validation only
+  → Remove all client restrictions in Burp and see if backend fails to revalidate.
+
+16. Weak or predictable upload paths/URLs
+  → Bruteforce file names like /uploads/123.jpg or /files/user1.png.
+
+17. No sanitization of file metadata (Exif, IPTC abuse)
+  → Inject payloads into metadata (e.g., GPS, Comments) and trigger parsing issues.
+
+18. Upload reflected in error messages or logs
+  → Look for filename reflections in error responses or server logs (for log injection or info leaks).
+
+💡 Pro tip: File uploads are rarely just “upload & done.”
+Test the upload, the processing, the storage, and the access path.
+
+✅ All checklists will be maintained here:
+🔗 https://lnkd.in/dRPJPRBZ
+📌 Bookmark it. Use it in recon. Add it to your playbook.
+
+⚡ Want to level up your skills?
+Explore our specialized training programs below:
+Bug Bounty Mastercourse : https://lnkd.in/d7p5spcS
+Web3 and Smart Contracts : https://lnkd.in/dHqq4d6E
+JS Source Code Review (recorded) : https://shorturl.at/EkteM
+Android (APK) Bug Bounty (recorded) : https://shorturl.at/XfnkU
+1-on-1 Trainings (Expensive) : https://shorturl.at/XtE3Q
+
+
+#bugbyfeature #fileupload #bugbounty #websecurity #infosec #rce #xxe #xss #cybersecurity #offensivesecurity #ethicalhacking #appsec #thecyberboy #livehacking #securityresearch #bughunter #bugbountytraining #training
